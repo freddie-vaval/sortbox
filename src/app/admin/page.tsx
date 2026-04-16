@@ -15,7 +15,7 @@ interface Lead {
 export default function AdminPage() {
   const [leads, setLeads] = useState<Lead[]>([]);
   const [loading, setLoading] = useState(true);
-  const [source, setSource] = useState<'supabase' | 'json'>('checking');
+  const [source, setSource] = useState<'supabase' | 'json' | 'checking'>('checking');
 
   useEffect(() => {
     fetch('/api/waitlist')
